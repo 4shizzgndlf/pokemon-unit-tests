@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>POKÉMON • COUNTS</title>
-  <link rel="stylesheet" th:href="@{/css/pokemon.css}">
+  <title>The Front Page of the Pokedex</title>
+  <link rel="stylesheet" th:href="@{/pokemon.css}">
   <link rel="stylesheet" href="../static/pokemon.css">
-
 </head>
 <body>
 <div class="container">
@@ -15,23 +14,24 @@
     <div class="brand">
       <div class="pixel-icon" aria-hidden="true"></div>
       <div>
-        <h1>COUNT PER TYPE</h1>
-        <div class="sub">HOW MANY PER PRIMARY TYPE</div>
+        <h1>Welcome to the pokedex</h1>
+        <div class="sub">FILTER BY PRIMARY TYPE</div>
       </div>
     </div>
 
     <nav>
-      <a th:href="@{/pokemon}">SINGLE</a>
-      <a th:href="@{/pokemon/by-primary-type}">BY TYPE</a>
-      <a th:href="@{/pokemon/averages}">AVERAGES</a>
-      <a th:href="@{/pokemon/counts}">COUNTS</a>
+      <a th:href="@{/fire}">Fire</a>
+      <a th:href="@{/type-select}">BY TYPE</a>
     </nav>
   </header>
 
-  <div class="card">
-    Show data here!
-  </div>
+  <footer class="footer">
+    <p>POKÉDEX TERMINAL • TRAINERS WELCOME</p>
+    <p class="small">Built with Spring Boot & Thymeleaf</p>
+  </footer>
 
 </div>
+
+
 </body>
 </html>

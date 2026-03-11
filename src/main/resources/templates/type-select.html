@@ -12,9 +12,11 @@
 
   <header>
     <div class="brand">
-      <div class="pixel-icon" aria-hidden="true"></div>
+      <a th:href="@{/}">
+        <div class="pixel-icon" aria-hidden="true"></div>
+      </a>
       <div>
-        <h1>POKÉMON BY TYPE</h1>
+        <h1>Type Selector</h1>
         <div class="sub">FILTER BY PRIMARY TYPE</div>
       </div>
     </div>
@@ -30,7 +32,7 @@
     <div class="row">
       <nav>
         <a>GRASS</a>
-        <a>FIRE</a>
+        <a th:href="@{/fire}">FIRE</a>
         <a>WATER</a>
         <a>BUG</a>
         <a>NORMAL</a>

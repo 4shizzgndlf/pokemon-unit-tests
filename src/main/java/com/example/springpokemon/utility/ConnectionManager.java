@@ -5,13 +5,8 @@ import java.sql.*;
 public class ConnectionManager {
     private Connection conn;
 
-    public ConnectionManager() {
-        try {
-            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pokemon","root","hejsa");
-        }
-        catch (Exception e){
-            System.out.println("Could not connect to database");
-        }
+    public ConnectionManager() throws SQLException {
+        this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pokemon","root","hejsa");
     }
 
     public Connection getConnection (){

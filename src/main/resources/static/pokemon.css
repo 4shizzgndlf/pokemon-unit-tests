@@ -279,3 +279,19 @@ a{
 @media(min-width:860px){
     .grid.two{ grid-template-columns:1.2fr .8fr; }
 }
+
+.footer{
+    margin-top:14px;
+    padding:10px;
+    text-align:center;
+
+    background:var(--panel);
+    border:var(--px) solid var(--line);
+    box-shadow: 10px 10px 0 var(--shadow);
+}
+
+.footer p{
+    margin:4px 0;
+    font-weight:900;
+    text-transform: uppercase;
+}
