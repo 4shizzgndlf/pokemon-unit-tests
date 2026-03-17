@@ -14,11 +14,9 @@ public class PokedexService {
         return repo.getALlFirePokemon();
     }
 
-    public Pokemon getSingleById(String id) {
-        Pokemon returnPokenom = null;
-        try{
-            returnPokenom  = repo.getSingleById(id);
-        }catch (SQLException e){
+    public Pokemon getSingleById(int id) throws SQLException {
+        Pokemon returnPokenom  = repo.getSingleById(id);
+        if(returnPokenom == null){
             throw new NoSuchElementException();
         }
         return returnPokenom;

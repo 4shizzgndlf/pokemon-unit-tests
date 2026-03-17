@@ -39,12 +39,12 @@ public class PokedexRepository {
         return allFirePokemon;
     }
 
-    public Pokemon getSingleById(String id) throws SQLException {
+    public Pokemon getSingleById(int id) throws SQLException {
         Pokemon returnPokemon = null;
         Connection database = new ConnectionManager().getConnection();
 
         PreparedStatement preparedStatement = database.prepareStatement("SELECT * FROM pokemon WHERE pokedex_number = ?");
-        preparedStatement.setInt(1, Integer.parseInt(id));
+        preparedStatement.setInt(1, id);
         ResultSet rs = preparedStatement.executeQuery();
         rs.next();
         returnPokemon = new Pokemon(

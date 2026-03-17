@@ -72,4 +72,9 @@ public class Pokemon {
     public String getSecondaryType() {
         return secondaryType;
     }
+
+    public int getTotalStats() {
+        return hp + attack + defence + specialAttack + specialDefence + speed;
+    }
+
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.SQLException;
+import java.util.NoSuchElementException;
 
 @Controller
 public class PokedexController {
@@ -32,9 +33,10 @@ public class PokedexController {
     }
 
     @GetMapping("/single")
-    public ModelAndView getSingleById(@RequestParam String id){
+    public ModelAndView getSingleById(@RequestParam int id) throws SQLException {
         ModelAndView mav = new ModelAndView("single");
-        Pokemon pokemon = pokeService.getSingleById(id);
+        Pokemon pokemon = null;
+        pokemon = pokeService.getSingleById(id);
         mav.addObject("pokemon",pokemon);
         return mav;
     }
